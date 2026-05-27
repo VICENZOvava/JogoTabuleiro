@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #630268, #32003a);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+}
+
+/* HEADER */
+
+.introducao {
+    border: 3px solid white;
+    border-radius: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jogador-info {
+    text-align: center;
+}
+
+.jogador-info h2 {
+    font-size: 28px;
+}
+
+.jogador-info p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.placar {
+    background-color: white;
+    color: #333;
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.score {
+    color: blue;
+    font-size: 18px;
+}
+
+.pontuacao {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* TITULO */
+
+.titulo {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 42px;
+}
+
+/* TABULEIRO */
+
+.tabuleiro {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.casa {
+    height: 50px;
+    background: white;
+    border-radius: 10px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 4px solid #ffffff;
+    transition: 0.3s;
+}
+
+.numero-casa {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    font-size: 12px;
+}
+
+.jogador {
+    border: 5px solid #07d99d;
+    background: #b9ffe9;
+}
+
+.bot {
+    border: 5px solid red;
+    background: #ffd0d0;
+}
+
+.jogador.bot {
+    background: gold;
+}
+
+/* STATUS */
+
+.status {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.painel {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    min-width: 350px;
+}
+
+.painel h2 {
+    margin-bottom: 20px;
+}
+
+/* DADO */
+
+.dado {
+    width: 120px;
+    height: 120px;
+
+    background-image: url("./images/dados.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    border-radius: 20px;
+    margin: auto;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-shadow: 2px 2px 5px black;
+}
+
+.rolarDado {
+    margin-top: 20px;
+    width: 220px;
+    height: 50px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rolarDado:hover {
+    transform: scale(1.05);
+}
+
+/* PEDRA PAPEL TESOURA */
+
+.escolhas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.opcao {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 12px solid;
+    background: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.opcao:hover {
+    transform: scale(1.08);
+}
+
+.pedra {
+    border-color: aqua;
+}
+
+.papel {
+    border-color: #07d99d;
+}
+
+.tesoura {
+    border-color: gold;
+}
+
+/* RESULTADO */
+
+.resultado-area {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.result {
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.gameplay {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.display {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 20px;
+    min-width: 250px;
+}
+
+.display h3 {
+    margin-bottom: 20px;
+}
+
+.teste,
+.teste1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* REGRAS */
+
+.regras-box {
+    max-width: 700px;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.regras-box h2 {
+    margin-bottom: 20px;
+}
+
+.regras-box p {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+/* BOTAO */
+
+.novoJogo {
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.novoJogo:hover {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:800px) {
+
+    .introducao {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .tabuleiro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .opcao {
+        width: 110px;
+        height: 110px;
+        font-size: 16px;
+    }
+
+    .painel {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* ESCOLHAS DO RESULTADO */
+
+.teste,
+.teste1{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 12px solid;
+    box-shadow: inset 0px 7px #ffffff;
+
+    margin: auto;
+}
+
+.teste img,
+.teste1 img{
+    width: 80px;
+    height: 80px;
+}

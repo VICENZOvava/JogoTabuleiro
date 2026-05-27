@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida Pedra Papel Tesoura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="introducao">
+
+        <div class="jogador-info">
+            <h2>VOCÊ</h2>
+            <p>Posição: <span id="posJogador">1</span></p>
+        </div>
+
+        <div class="placar">
+            <h2 class="score">PONTOS</h2>
+            <p class="pontuacao">0</p>
+        </div>
+
+        <div class="jogador-info">
+            <h2>BOT</h2>
+            <p>Posição: <span id="posBot">1</span></p>
+        </div>
+
+    </header>
+
+    <main>
+
+        <h1 class="titulo">
+            CORRIDA PEDRA • PAPEL • TESOURA
+        </h1>
+
+        <!-- TABULEIRO -->
+        <section class="tabuleiro" id="tabuleiro">
+
+            <!-- casas criadas no JS -->
+
+        </section>
+
+        <!-- STATUS -->
+        <section class="status">
+
+            <div class="painel">
+                <h2>DADO</h2>
+
+                <div class="dado" id="valorDado">
+                    ?
+                </div>
+
+                <button class="rolarDado" onclick="rolarDado()">
+                    Rolar Dado
+                </button>
+            </div>
+
+            <div class="painel">
+<h2>ESCOLHA SUA JOGADA</h2>
+
+<div class="escolhas">
+
+    <!-- PEDRA -->
+    <button class="pedra opcao"
+        onclick="jogar('pedra')">
+
+        <img src="./images/icon-rock.svg"
+            alt="Pedra">
+
+    </button>
+
+    <!-- PAPEL -->
+    <button class="papel opcao"
+        onclick="jogar('papel')">
+
+        <img src="./images/icon-paper.svg"
+            alt="Papel">
+
+    </button>
+
+    <!-- TESOURA -->
+    <button class="tesoura opcao"
+        onclick="jogar('tesoura')">
+
+        <img src="./images/icon-scissors.svg"
+            alt="Tesoura">
+
+    </button>
+
+</div>
+
+            </div>
+
+        </section>
+
+        <!-- RESULTADO -->
+        <section class="resultado-area">
+
+            <h2 class="result">
+                Role o dado para começar
+            </h2>
+
+            <div class="gameplay">
+
+                <div class="display">
+                    <h3>Você escolheu</h3>
+                    <p class="teste">?</p>
+                </div>
+
+                <div class="display">
+                    <h3>Computador escolheu</h3>
+                    <p class="teste1">?</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- REGRAS -->
+        <section class="regras-box">
+
+            <h2>REGRAS</h2>
+
+            <p>✅ Vitória → permanece na casa do dado</p>
+
+            <p>🤝 Empate → volta e anda apenas +1 casa</p>
+
+            <p>❌ Derrota → volta para posição anterior</p>
+
+            <p> ⭐ Casa bônus → +2 casas</p>
+
+            <p>💀 Armadilha → -3 casas</p>
+
+            <p>🚀 Turbo → +4 casas </p>
+
+            <p>⬅️ Voltar → -2 casas</p>
+
+
+        </section>
+
+        <button class="novoJogo" onclick="reset()">
+            Novo Jogo
+        </button>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
