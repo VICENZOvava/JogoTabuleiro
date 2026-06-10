@@ -4,5 +4,5 @@ https://vicenzovava.github.io/JogoTabuleiro/
 
 ![Print1](https://raw.githubusercontent.com/VICENZOvava/JogoTabuleiro/refs/heads/main/images/print1.png)
 
-### Luis Henrique Pereira e Vicenzo Vieira Varandas 
+## Luis Henrique Pereira e Vicenzo Vieira Varandas 
 
